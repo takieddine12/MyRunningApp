@@ -17,5 +17,5 @@ data class RunModel(
 
     @PrimaryKey(autoGenerate = true)
     @NotNull
-    private var runningID : Int? = null
+     var runningID : Int? = null
 }
