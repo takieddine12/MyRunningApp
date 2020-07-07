@@ -27,6 +27,8 @@ interface RunDao {
     @Query("SELECT * FROM runningtable ORDER BY caloriesBurned")
     fun getRunsSortedByCaloriesBurned() : LiveData<List<RunModel>>
 
+
+    ///Totals
     @Query("SELECT SUM(timeStamp) FROM runningtable")
     fun getTotalTimeStamp() : LiveData<Long>
 
