@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.myrunningapp.Constants
 import com.example.myrunningapp.R
+import com.example.myrunningapp.services.TrackingService.Companion.pathPoints
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
     private fun providedPendignIntentIfNeeded(intent : Intent?){
       if(intent?.action == Constants.ACION_SHOW_TRACKING_FRAGMEMTN){
            NavHostFragment.findNavController().navigate(R.id.trackingFragment)

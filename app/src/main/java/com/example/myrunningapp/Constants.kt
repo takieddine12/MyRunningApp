@@ -1,5 +1,7 @@
 package com.example.myrunningapp
 
+import android.graphics.Color
+
 object Constants {
 
     const val SERVICE_START_RESUME = "SERVICE_START_RESUME"
@@ -10,6 +12,9 @@ object Constants {
     const val ACION_SHOW_TRACKING_FRAGMEMTN = "ACION_SHOW_TRACKING_FRAGMEMTN"
     const val NOTIFICATION_SHOW_ACTION  = "NOTIFICATION_SHOW_ACTION"
     const val LOCATION_UPDATE_INTERVAL = 5000L
+    const val CAMERA_ZOOM = 15f
     const val FASTEST_UPDATE_INTERVAL = 2000L
+    const val POLYLINE_COLOR = Color.RED
+    const val POLYLINE_WIDTH = 8f
     const val NOTIFICATION_ID = 1
 }

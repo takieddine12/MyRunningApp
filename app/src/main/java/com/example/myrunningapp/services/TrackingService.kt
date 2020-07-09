@@ -38,9 +38,8 @@ class TrackingService : LifecycleService(){
     var isFirstRun = true
     lateinit var fusedLocationProviderClient : FusedLocationProviderClient
     companion object{
-       var  isTracking = MutableLiveData<Boolean>()
+        var  isTracking = MutableLiveData<Boolean>()
         val pathPoints = MutableLiveData<PolyLines>()
-
 
 
     }
@@ -99,7 +98,6 @@ class TrackingService : LifecycleService(){
         add(mutableListOf())
         pathPoints.postValue(this)
     } ?: pathPoints.postValue(mutableListOf(mutableListOf()))
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         super.onStartCommand(intent, flags, startId)
         intent?.let {
@@ -124,7 +122,6 @@ class TrackingService : LifecycleService(){
 
         return Service.START_NOT_STICKY
     }
-
     private fun createForegroundNotification(){
         AddEmptyPolylines()
         isTracking.postValue(true)
@@ -147,12 +144,10 @@ class TrackingService : LifecycleService(){
 
 
     }
-
     private fun createPendingIntent() = PendingIntent.getActivity(this,
     1,Intent(this,MainActivity::class.java).also {
             it.action = Constants.NOTIFICATION_SHOW_ACTION
         }, FLAG_UPDATE_CURRENT)
-
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannel(notificationManager: NotificationManager){
         var notificationChannel = NotificationChannel(Constants.NOTIFICATION_CHANNEL_ID,
