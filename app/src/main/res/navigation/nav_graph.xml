@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/setupFragment">
+
+    <action android:id="@+id/action_global_trackingfragment"
+        app:destination="@id/trackingFragment"
+        app:launchSingleTop="true"/>
+    <fragment
+        android:id="@+id/runFragment2"
+        android:name="com.example.myrunningapp.UI.Fragments.RunFragment"
+        android:label="RunFragment" >
+        <action
+            android:id="@+id/action_runFragment2_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.example.myrunningapp.UI.Fragments.TrackingFragment"
+        android:label="TrackingFragment" >
+        <action
+            android:id="@+id/action_trackingFragment_to_runFragment2"
+            app:destination="@id/runFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.example.myrunningapp.UI.Fragments.settingsFragment"
+        android:label="settingsFragment" />
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.myrunningapp.UI.Fragments.statsFragment"
+        android:label="statsFragment" />
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.example.myrunningapp.UI.Fragments.setupFragment"
+        android:label="setupFragment" >
+        <action
+            android:id="@+id/action_setupFragment_to_runFragment2"
+            app:destination="@id/runFragment2" />
+    </fragment>
+</navigation>
